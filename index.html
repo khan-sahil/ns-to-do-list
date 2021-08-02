@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="index.js"></script>
+
+    <title>To Do List</title>
+    <style>
+        .background-blue {
+            background-color: #221767 !important;
+        }
+
+        .main-heading {
+            text-transform: uppercase;
+            font-size: 29px;
+            font-weight: bold;
+        }
+
+        .heading {
+            color: #392e80;
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .center-card {
+            justify-content: center;
+            display: flex;
+        }
+
+        .main-content {
+            box-shadow: 0 3px 15px 0 rgb(40 167 69);
+            transition: 0.3s;
+            padding: 30px;
+            border-radius: 10px;
+            width: 70%;
+        }
+
+        .success-text {
+            color: #221767 !important;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-white background-blue p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center col-md-12 col-sm-12">
+                    <h2 class="main-heading">To-Do List</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-3 ">
+        <div class="center-card">
+            <div class=" main-content">
+                <div class="text-center p-2">
+                    <h2 class="heading">Add Items</h2>
+                </div>
+
+                <label id="lblsuccess" class="success-text text-center" style="display: none;">
+                </label>
+
+                <form id="addForm">
+                    <div class="row">
+                        <div class="col-md-10">
+
+                            <input type="text" onkeyup="toggleButton(this, 'submit')" class="form-control" id="item">
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="submit" class="btn btn-dark" id="submit" value="Add" disabled>
+                        </div>
+                    </div>
+                </form>
+                <div style="padding: 40px;">
+
+                </div>
+
+
+                <h3 class="heading text-center p-2">Tasks</h3>
+
+                <form id="addForm">
+                    <ul class="list-group" id="items"></ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
